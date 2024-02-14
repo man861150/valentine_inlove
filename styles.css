@@ -115,3 +115,83 @@
       transform: translateY(100vh) rotate(360deg);
     }
 }
+
+.valentine-message {
+    color: #dc3545;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: heartbeat 1s infinite alternate;
+  }
+  
+  @keyframes heartbeat {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  
+  .valentine-message p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  .valentine-message p:first-child {
+    font-weight: bold;
+  }
+  
+  .valentine-message p:last-child {
+    font-style: italic;
+  }
+
+  .love-photo-section {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .love-photo {
+    position: relative;
+    display: inline-block;
+  
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .love-photo img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid #fff;
+  }
+
+  .love-photo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #ff0000, #ff007f, #ff00ff, #8000ff, #0000ff, #00ff80, #00ff00, #80ff00);
+    background-size: 400% 400%;
+    border-radius: 50%;
+    z-index: -1;
+    animation: gradient-animation 10s ease infinite;
+  }
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  
+  
