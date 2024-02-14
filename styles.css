@@ -1,0 +1,117 @@
+.container {
+    background-color: #EEFAFF;
+}
+
+.container .header .navbar .navbar-brand img {
+    max-height: 50px;
+    width: auto;
+}
+
+.container .main {
+    margin-top: 35px;
+}
+
+.container .main .counter {
+    background-color: #FFD2D2;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .main .counter #day-counter {
+    font-weight: bold;
+    color: #A000D9;
+    font-size: 100px;
+}
+.container .main .counter form label {
+    display: block;
+    font-weight: bold;
+}
+
+
+.container .main .profile-section {
+    align-items: center;
+}
+
+
+
+.container .main .profile .avatar img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.footer {
+    padding: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.footer .marquee {
+
+    overflow: hidden;
+    display: inline-flex;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    margin-right: 300px;
+    color: palevioletred;
+    font-weight: bold;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#music-icon {
+    cursor: pointer;
+}
+
+.container .header .heart-decoration {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensures clicks pass through hearts */
+}
+
+.container .header .heart-decoration .love {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('images/love.svg') no-repeat; /* Replace 'heart.png' with your heart image */
+    background-size: contain;
+    animation: fall 5s linear infinite;
+}
+.container .header .heart-decoration .care {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('images/care.svg') no-repeat; /* Replace 'heart.png' with your heart image */
+    background-size: contain;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+      transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+    }
+}
